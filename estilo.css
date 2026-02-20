@@ -208,4 +208,19 @@ footer{
 
 }
 
+@media (max-width: 768px){
+
+    .swiper{
+        margin-bottom: 10px;
+    }
+
+    .momentos{
+        padding-bottom: 0;
+    }
+
+    footer{
+        margin-top: 10px;
+    }
+
+}
 
