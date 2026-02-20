@@ -169,4 +169,26 @@ footer{
         margin-top: 20px;
     }
 }
+/* ================= AJUSTE REAL MOBILE ================= */
+@media (max-width: 768px){
+
+    .banner{
+        padding-bottom: 3rem;
+    }
+
+    .descricao{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .botoes{
+        position: relative;
+        margin-top: 25px;
+        justify-content: center;
+    }
+
+    footer{
+        margin-top: 40px;
+    }
+}
 
