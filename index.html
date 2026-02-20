@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz dia 14 cheirosa!</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <div class="logo">
+        <img src="logo.png" width="50">
+    </div>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Séries</a>
+        <a href="#">Filmes</a>
+        <a href="#">Minha lista</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <div class="conteudo">
+        <p class="titulo">Isa e João</p>
+
+        <p class="detalhes">
+            <span>14 DE FEVEREIRO (OFICIAL) • 1 TEMPORADA (ATÉ AGORA)</span>
+            <span class="stars">
+                <i class="fa-solid fa-star" style="color:#ff0000;"></i>
+                <i class="fa-solid fa-star" style="color:#ff0000;"></i>
+                <i class="fa-solid fa-star" style="color:#ff0000;"></i>
+                <i class="fa-solid fa-star" style="color:#ff0000;"></i>
+                <i class="fa-solid fa-star" style="color:#ff0000;"></i>
+            </span>
+        </p>
+
+        <p class="descricao">
+          Eu sabia que queria ficar com você no primeiro instante em que te vi, mas foi nesse mesmo dia, ano passado, que fiz a coisa mais importante da minha vida. Te pedir em namoro não foi só o evento mais importante da minha vida, como também foi a melhor escolha que já fiz, o maior acerto.
+É tão bom encontrar alguém que, não importa o tempo que você passe junto, você nunca se cansa, nunca enjoa e que te faz tão bem. Alguém com quem, quando estou junto, posso só ser quem sou, sem reprimir nada.
+Nunca imaginei que a melhor coisa que eu podia sentir na vida seria ver o sorriso de outra pessoa, o seu sorriso. E sei que sou o cara mais sortudo do mundo por ter você, e quero corresponder à altura, para que não seja só 1 ano (oficial), mas o resto da vida toda.
+Infelizmente, não estamos passando esse dia 14 como a gente queria, mas eu garanto que vamos aproveitar inúmeros outros momentos esse ano. Você é incrível, Isa. A melhor coisa que existe é estar contigo. Você é meu lugar preferido no mundo e sempre será.
+Sei que sempre vou sentir aquele aperto todas as vezes que tiver que te dar tchau, sei que sempre vou ficar ansioso pra te ver, sei que sempre vou fazer tudo o que posso pra te ver bem e feliz, e sei que sempre vou te amar.
+Você é tudo pra mim, meu amor. Obrigado por ser essa garota tão perfeita, que faz com que não existam adjetivos bons o suficiente pra te descrever, e obrigado por me mostrar o que é amor. Sei que o nosso vai durar pra sempre.
+Eu te amo. Feliz nosso dia xIv ❤️ 
+        </p>
+
+        <div class="botoes">
+            <button><i class="fa-solid fa-play"></i> Continuar</button>
+            <button><i class="fa-solid fa-star"></i> Favorito</button>
+
+            <button id="btn-audio">
+                <i class="fa-solid fa-music"></i> Tocar
+            </button>
+
+            <audio id="audio" src="iris.mp3"></audio>
+        </div>
+    </div>
+</section>
+
+<section class="momentos">
+    <h2>Nossos Momentos</h2>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./fotos/1.png"></div>
+            <div class="swiper-slide"><img src="./fotos/2.png"></div>
+            <div class="swiper-slide"><img src="./fotos/3.png"></div>
+            <div class="swiper-slide"><img src="./fotos/4.png"></div>
+            <div class="swiper-slide"><img src="./fotos/5.png"></div>
+            <div class="swiper-slide"><img src="./fotos/6.png"></div>
+            <div class="swiper-slide"><img src="./fotos/7.png"></div>
+            <div class="swiper-slide"><img src="./fotos/8.png"></div>
+            <div class="swiper-slide"><img src="./fotos/9.png"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    De 2024 - Para sempre
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+    const audio = document.getElementById('audio');
+    const btnAudio = document.getElementById('btn-audio');
+
+    btnAudio.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            btnAudio.innerHTML = '<i class="fa-solid fa-pause"></i> Pausar';
+        } else {
+            audio.pause();
+            btnAudio.innerHTML = '<i class="fa-solid fa-music"></i> Tocar';
+        }
+    });
+
+
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 2,
+        spaceBetween: 10,
+        breakpoints: {
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            900: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
